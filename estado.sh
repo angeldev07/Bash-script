@@ -1,10 +1,9 @@
 #! /bin/bash
+ls -l
+for i in $(ls); do
+    if [ -r $i ]; then   
+        echo "lectura para $i "
+    fi
 
-archivos=$(ls)
-IFS=' ' read -r -a archivos <<< $(ls)
-
-echo "$paths"
-# for item in "${archivos[@]}"
-# do
-#     echo -e "$item \n"
-# done
+    #echo $i
+done
